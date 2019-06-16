@@ -1,11 +1,11 @@
 import axios from 'axios';
 
-const baseURl = 'https://jsonplaceholder.typicode.com';
+const baseUrl = 'https://jsonplaceholder.typicode.com';
 
 const getComments = async (maximumComments) => {
     try {
         const comments = (await axios
-            .get(`${baseURl}/comments`))
+            .get(`${baseUrl}/comments`))
             .data
             .slice(0, maximumComments);
 
@@ -25,7 +25,7 @@ const getComments = async (maximumComments) => {
 const getTodos = async (maximumComments) => {
     try {
         const comments = await axios
-            .get(`${baseURl}/todos`)
+            .get(`${baseUrl}/todos`)
             .data
             .slice(maximumComments);
 
